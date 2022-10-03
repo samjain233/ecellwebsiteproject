@@ -5,27 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/2121515fbf.js' crossorigin='anonymous'></script>
     <title>Contest-Leetcode</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/contest.css">
+    <link rel="stylesheet" href="css/hamburgermenu.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
     <!-- navbar-------------------------------------------------------------------------------- -->
     <div>
         <nav class="navbar">
-            <div class="logo">
+            <div class="logo-container">
+                <i class="fa-solid fa-bars" id="hamburger" style="color: white; font-size: 25px;"></i>
+                <i class="fa fa-close" id="close" style="color: white; font-size: 25px;"></i>
                 <img src="logo.png" alt="leetcode" class="logo">
             </div>
-            <ul class="nav">
+            <ul class="nav bold-700">
                 <li><a href="#">Explore</a></li>
                 <li><a href="#">Problems</a></li>
-                <li><a href="#">Contest</a></li>
+                <li><a href="contest.html">Contest</a></li>
                 <li><a href="#">Discuss</a></li>
-                <li><a href="#">Interview</a></li>
-                <li><a href="#">Store</a></li>
+                <li><a href="#">Interview <i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="#" style="color: #EB9718;">Store <i class="fa-solid fa-angle-down"></i></a></li>
             </ul>
+            <div class="right-nav">
+                <p class="padding-10" style="color: #EB9718; background-color: #3E3E3E;">Premium</p>
+                <i class="fa-solid fa-bell padding-10"></i>
+                <p><i class="fa-solid fa-fire padding-10"></i>0</p>
+                <a href="https://www.linkedin.com/in/sambhav-jain-6519b8237/"><img class="padding-10"
+                        src="images/default_avatar.jpg" alt=""></a>
+            </div>
         </nav>
     </div>
     <!-- -------------------------------------------------------------------------------------- -->
@@ -39,20 +55,24 @@
 
         <!-- first two cards  -->
         <div class="card-container">
-            <div class="card" id="card1">
-                <img src="images/c1.png" alt="contest1" style="width:100%">
-                <div class="card-details">
-                    <h4 class="color1">Weekly Contest 314</h4>
-                    <p class="color2">Sunday 8:00 AM GMT +5:30</p>
+            <a href="https://leetcode.com/contest/weekly-contest-314/" style="text-decoration: none;">
+                <div class="card" id="card1">
+                    <img src="images/c1.png" alt="contest1" style="width:100%">
+                    <div class="card-details">
+                        <h4 class="color1" id="colourChange1">Weekly Contest 314</h4>
+                        <p class="color2">Sunday 8:00 AM GMT +5:30</p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="images/c2.png" alt="contest2" style="width:100%">
-                <div class="card-details">
-                    <h4 class="color1">Biweekly Contest 89</h4>
-                    <p class="color2">Saturday 8:00 PM GMT +5:30</p>
+            </a>
+            <a href="https://leetcode.com/contest/biweekly-contest-89/" style="text-decoration: none;">
+                <div class="card" id="card2">
+                    <img src="images/c2.png" alt="contest2" style="width:100%">
+                    <div class="card-details">
+                        <h4 class="color1" id="colourChange2">Biweekly Contest 89</h4>
+                        <p class="color2">Saturday 8:00 PM GMT +5:30</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <!-- more cards below  -->
@@ -61,35 +81,26 @@
 
             <!-- Slideshow container -->
             <div class="carousel">
-
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="images/c3.png" style="width:100%">
-                    <div class="text">Weekly Contest 291</div>
+                <div class="cardElement">
+                    <img id="f34" src="images/c3.png" alt="">
+                    <div class="data">
+                        <p id="r23w">Weekly Contest 291</p>
+                        <p style="font-size: 13px;" class="color2">Ended <span>May 1,2022</span></p>
+                    </div>
                 </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="images/c4.png" style="width:100%">
-                    <div class="text">Weekly Contest 290</div>
+                <div class="cardElement hid">
+                    <img src="images/c4.png" alt="">
+                    <div class="data">
+                        <p>Weekly Contest 290</p>
+                        <p style="font-size: 13px;" class="color2">Ended <span>May 24,2022</span></p>
+                    </div>
                 </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="images/c5.png" style="width:100%">
-                    <div class="text">Weekly contest 85</div>
-                </div> -->
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <br>
-
-                <div style="text-align:center">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                <div class="cardElement hid">
+                    <img src="images/c5.png" alt="">
+                    <div class="data">
+                        <p>Weekly Contest 85</p>
+                        <p style="font-size: 13px;" class="color2">Ended <span>Aug 20,2022</span></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,11 +165,68 @@
                     <p>Virtual</p>
                 </div>
             </div>
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#" >2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
         </div>
     </div>
 
 
+    <!-- footer ------------------------------------------------------------------------- -->
+    <footer>
+        <div class="footer">
+            <!-- copyright div  -->
+            <div class="copyright">
+                <p class="color1">Copyright © 2022 LeetCode</p>
+            </div>
+
+            <div class="tabs">
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Bug Bounty</a></li>
+                    <li><a href="#">Assessment</a></li>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="location">
+                <img src="images/unitedstates.svg" alt="">
+                <p>United States</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ---------------------------------------------------------------------------------- -->
+
+    <!-- hamburger menu  -->
+    <div class="menuHamburger">
+        <ul class="nav bold-700">
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Problems</a></li>
+            <li><a href="contest.html">Contest</a></li>
+            <li><a href="#">Discuss</a></li>
+            <li><a href="#">Interview <i class="fa-solid fa-angle-down"></i></a></li>
+            <li><a href="#" style="color: #EB9718;">Store <i class="fa-solid fa-angle-down"></i></a></li>
+            <div class="hr"></div>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">My playgrounds</a></li>
+            <li><a href="#">Dark Mode</a></li>
+            <li><a href="#">Sign Out</a></li>
+        </ul>
+    </div>
+
+    <script src="js/hamburgerMenu.js"></script>
     <script src="js/carousel.js"></script>
+    <script src="js/contest.js"></script>
 </body>
 
 </html>
