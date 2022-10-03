@@ -136,11 +136,13 @@
 }
 
 .fourth-section .level-items {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .fourth-section .level-items .box-element {
     padding: 5px 5px;
+    margin: 5px 5px;
     background-color: #3E3E3E;
     border-radius: 15px;
     color: #BDBFC2;
